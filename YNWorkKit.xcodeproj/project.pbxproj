@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E4149721D853AC80070F491 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4149711D853AC80070F491 /* BaseViewController.m */; };
 		2EB127821D7D6081001D760E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB127811D7D6081001D760E /* main.m */; };
 		2EB127881D7D6081001D760E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB127871D7D6081001D760E /* ViewController.m */; };
 		2EB1278B1D7D6081001D760E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB127891D7D6081001D760E /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E4149701D853AC80070F491 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		2E4149711D853AC80070F491 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		2EB1277D1D7D6081001D760E /* YNWorkKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNWorkKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB127811D7D6081001D760E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2EB127861D7D6081001D760E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../../ViewController.h; sourceTree = "<group>"; };
@@ -81,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E41496F1D853AA40070F491 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2E4149701D853AC80070F491 /* BaseViewController.h */,
+				2E4149711D853AC80070F491 /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		2EB127741D7D6081001D760E = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +145,7 @@
 		2EB127A31D7D6361001D760E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				2E41496F1D853AA40070F491 /* Base */,
 				2EB127A41D7D6361001D760E /* Categories */,
 				2EB127A51D7D6361001D760E /* Tools */,
 			);
@@ -349,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EB127BD1D7D6528001D760E /* NSArray+Log.m in Sources */,
+				2E4149721D853AC80070F491 /* BaseViewController.m in Sources */,
 				2EB127E01D7D6ACE001D760E /* UIImage+Extend.m in Sources */,
 				2EB127F41D7D6F03001D760E /* ObjectCacheManager.m in Sources */,
 				2EB127E91D7D6D33001D760E /* GCDTaskQueue.m in Sources */,
