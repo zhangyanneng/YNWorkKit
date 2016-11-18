@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  YNWorkKit
+//
+//  Created by zyn on 2016/11/17.
+//  Copyright © 2016年 张艳能. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define debug 1
+
+
+
+#endif /* PrefixHeader_pch */
