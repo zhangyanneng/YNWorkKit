@@ -18,7 +18,13 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"首页";
+    
+    
+    
+    
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

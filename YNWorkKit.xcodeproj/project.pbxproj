@@ -22,6 +22,10 @@
 		2E2B1B1F1DDD30AA000644DC /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B1B1E1DDD30AA000644DC /* NearbyViewController.m */; };
 		2E2B1B221DDD30B7000644DC /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B1B211DDD30B7000644DC /* SettingViewController.m */; };
 		2E4149721D853AC80070F491 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4149711D853AC80070F491 /* BaseViewController.m */; };
+		2E4BCA611DED0831008666D4 /* KeyChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4BCA601DED0831008666D4 /* KeyChainViewController.m */; };
+		2E4BCA631DED08EB008666D4 /* KeyChainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4BCA621DED08EB008666D4 /* KeyChainViewController.xib */; };
+		2E4BCA6B1DED166F008666D4 /* SAMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4BCA681DED166F008666D4 /* SAMKeychain.m */; };
+		2E4BCA6C1DED166F008666D4 /* SAMKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4BCA6A1DED166F008666D4 /* SAMKeychainQuery.m */; };
 		2E7F30671DD93CCB00352F60 /* NSArray+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F30661DD93CCB00352F60 /* NSArray+Compare.m */; };
 		2EB127821D7D6081001D760E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB127811D7D6081001D760E /* main.m */; };
 		2EB1278B1D7D6081001D760E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB127891D7D6081001D760E /* Main.storyboard */; };
@@ -79,6 +83,14 @@
 		2E2B1B231DDD3356000644DC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2E4149701D853AC80070F491 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		2E4149711D853AC80070F491 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		2E4BCA5F1DED0831008666D4 /* KeyChainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainViewController.h; sourceTree = "<group>"; };
+		2E4BCA601DED0831008666D4 /* KeyChainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainViewController.m; sourceTree = "<group>"; };
+		2E4BCA621DED08EB008666D4 /* KeyChainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyChainViewController.xib; sourceTree = "<group>"; };
+		2E4BCA651DED0F2F008666D4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2E4BCA671DED166F008666D4 /* SAMKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychain.h; sourceTree = "<group>"; };
+		2E4BCA681DED166F008666D4 /* SAMKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychain.m; sourceTree = "<group>"; };
+		2E4BCA691DED166F008666D4 /* SAMKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychainQuery.h; sourceTree = "<group>"; };
+		2E4BCA6A1DED166F008666D4 /* SAMKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychainQuery.m; sourceTree = "<group>"; };
 		2E7F30651DD93CCB00352F60 /* NSArray+Compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Compare.h"; sourceTree = "<group>"; };
 		2E7F30661DD93CCB00352F60 /* NSArray+Compare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Compare.m"; sourceTree = "<group>"; };
 		2EB1277D1D7D6081001D760E /* YNWorkKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNWorkKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -389,6 +401,9 @@
 				2E2B1B1E1DDD30AA000644DC /* NearbyViewController.m */,
 				2E1C5C761DDD9F8C00AE5478 /* PopViewController.h */,
 				2E1C5C771DDD9F8C00AE5478 /* PopViewController.m */,
+				2E4BCA5F1DED0831008666D4 /* KeyChainViewController.h */,
+				2E4BCA601DED0831008666D4 /* KeyChainViewController.m */,
+				2E4BCA621DED08EB008666D4 /* KeyChainViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -470,11 +485,31 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		2E4BCA641DED0F2F008666D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E4BCA651DED0F2F008666D4 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E4BCA6D1DED170A008666D4 /* SAMKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				2E4BCA671DED166F008666D4 /* SAMKeychain.h */,
+				2E4BCA681DED166F008666D4 /* SAMKeychain.m */,
+				2E4BCA691DED166F008666D4 /* SAMKeychainQuery.h */,
+				2E4BCA6A1DED166F008666D4 /* SAMKeychainQuery.m */,
+			);
+			name = SAMKeychain;
+			sourceTree = "<group>";
+		};
 		2EB127741D7D6081001D760E = {
 			isa = PBXGroup;
 			children = (
 				2EB1277F1D7D6081001D760E /* YNWorkKit */,
 				2EB1277E1D7D6081001D760E /* Products */,
+				2E4BCA641DED0F2F008666D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -555,6 +590,7 @@
 		2EB127A51D7D6361001D760E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2E4BCA6D1DED170A008666D4 /* SAMKeychain */,
 				2EB127F01D7D6F03001D760E /* ObjectCacheManager.h */,
 				2EB127F11D7D6F03001D760E /* ObjectCacheManager.m */,
 				2EB127F21D7D6F03001D760E /* SecurityUtil.h */,
@@ -701,6 +737,7 @@
 			files = (
 				2E2B1B001DDD2F56000644DC /* Info.plist in Resources */,
 				2EB127901D7D6081001D760E /* LaunchScreen.storyboard in Resources */,
+				2E4BCA631DED08EB008666D4 /* KeyChainViewController.xib in Resources */,
 				2EB1278D1D7D6081001D760E /* Assets.xcassets in Resources */,
 				2EB1278B1D7D6081001D760E /* Main.storyboard in Resources */,
 			);
@@ -723,8 +760,11 @@
 				2E2B1AFC1DDD2F56000644DC /* CATransaction+TransactionWithAnimationsAndCompletion.m in Sources */,
 				2E2B1AFD1DDD2F56000644DC /* YALAnimatingTabBarConstants.m in Sources */,
 				2EB127DD1D7D6ABB001D760E /* NSString+Validate.m in Sources */,
+				2E4BCA611DED0831008666D4 /* KeyChainViewController.m in Sources */,
+				2E4BCA6C1DED166F008666D4 /* SAMKeychainQuery.m in Sources */,
 				2E2B1AFA1DDD2F56000644DC /* YALSpringAnimation.m in Sources */,
 				2EB127EC1D7D6DB6001D760E /* IOManager.m in Sources */,
+				2E4BCA6B1DED166F008666D4 /* SAMKeychain.m in Sources */,
 				2E2B1B011DDD2F56000644DC /* YALCustomHeightTabBar.m in Sources */,
 				2EB127AF1D7D6361001D760E /* AppDelegate.m in Sources */,
 				2E2B1AFB1DDD2F56000644DC /* CAAnimation+YALTabBarViewAnimations.m in Sources */,

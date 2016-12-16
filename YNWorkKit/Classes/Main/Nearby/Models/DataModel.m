@@ -19,8 +19,8 @@
                            @"targetVc" : @"PopViewController"
                         },
                         @{
-                           @"title" : @"Pop动画",
-                           @"targetVc" : @"PopViewController"
+                           @"title" : @"KeyChain",
+                           @"targetVc" : @"KeyChainViewController"
                         }
                        ];
     for (NSDictionary *dict in array) {

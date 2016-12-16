@@ -1,7 +1,6 @@
 
 
 #import "KeychainWrapper.h"
-#import "AppInfoUtil.h"
 
 @interface KeychainWrapper ()
 @property (nonatomic, strong) NSMutableDictionary *genericPasswordQuery;
@@ -23,7 +22,8 @@
     static KeychainWrapper *_instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[KeychainWrapper alloc] initWithIdentifier:[AppInfoUtil getAppBundleIdentifier] accessGroup:nil];
+        NSString *bundleID = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
+        _instance = [[KeychainWrapper alloc] initWithIdentifier:bundleID accessGroup:nil];
     });
     return _instance;
 }
